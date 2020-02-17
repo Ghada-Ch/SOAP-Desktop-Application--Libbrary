@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://controller/" name="DAOUserServiceService" targetNamespace="http://controller/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://127.0.0.1:3314/LibraryManager/DAOUserService?xsd=1" namespace="http://controller/" />
+    </xsd:schema>
+  </types>
+  <message name="find">
+    <part name="parameters" element="tns:find" />
+  </message>
+  <message name="findResponse">
+    <part name="parameters" element="tns:findResponse" />
+  </message>
+  <message name="RecupereUsers">
+    <part name="parameters" element="tns:RecupereUsers" />
+  </message>
+  <message name="RecupereUsersResponse">
+    <part name="parameters" element="tns:RecupereUsersResponse" />
+  </message>
+  <message name="ModifyUser">
+    <part name="parameters" element="tns:ModifyUser" />
+  </message>
+  <message name="ModifyUserResponse">
+    <part name="parameters" element="tns:ModifyUserResponse" />
+  </message>
+  <message name="AddUser">
+    <part name="parameters" element="tns:AddUser" />
+  </message>
+  <message name="AddUserResponse">
+    <part name="parameters" element="tns:AddUserResponse" />
+  </message>
+  <message name="DeleteUser">
+    <part name="parameters" element="tns:DeleteUser" />
+  </message>
+  <message name="DeleteUserResponse">
+    <part name="parameters" element="tns:DeleteUserResponse" />
+  </message>
+  <portType name="DAOUserService">
+    <operation name="find">
+      <input message="tns:find" />
+      <output message="tns:findResponse" />
+    </operation>
+    <operation name="RecupereUsers">
+      <input message="tns:RecupereUsers" />
+      <output message="tns:RecupereUsersResponse" />
+    </operation>
+    <operation name="ModifyUser">
+      <input message="tns:ModifyUser" />
+      <output message="tns:ModifyUserResponse" />
+    </operation>
+    <operation name="AddUser">
+      <input message="tns:AddUser" />
+      <output message="tns:AddUserResponse" />
+    </operation>
+    <operation name="DeleteUser">
+      <input message="tns:DeleteUser" />
+      <output message="tns:DeleteUserResponse" />
+    </operation>
+  </portType>
+  <binding name="DAOUserServicePortBinding" type="tns:DAOUserService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="find">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="RecupereUsers">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ModifyUser">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="AddUser">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="DeleteUser">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="DAOUserServiceService">
+    <port name="DAOUserServicePort" binding="tns:DAOUserServicePortBinding">
+      <soap:address location="http://127.0.0.1:3314/LibraryManager/DAOUserService" />
+    </port>
+  </service>
+</definitions>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://controller/" name="DAOBookServiceService" targetNamespace="http://controller/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://127.0.0.1:3347/LibraryManager/DAOBookService?xsd=1" namespace="http://controller/" />
+    </xsd:schema>
+  </types>
+  <message name="AddBook">
+    <part name="parameters" element="tns:AddBook" />
+  </message>
+  <message name="AddBookResponse">
+    <part name="parameters" element="tns:AddBookResponse" />
+  </message>
+  <message name="ModifyBook">
+    <part name="parameters" element="tns:ModifyBook" />
+  </message>
+  <message name="ModifyBookResponse">
+    <part name="parameters" element="tns:ModifyBookResponse" />
+  </message>
+  <message name="DeleteBook">
+    <part name="parameters" element="tns:DeleteBook" />
+  </message>
+  <message name="DeleteBookResponse">
+    <part name="parameters" element="tns:DeleteBookResponse" />
+  </message>
+  <message name="RecupereBooks">
+    <part name="parameters" element="tns:RecupereBooks" />
+  </message>
+  <message name="RecupereBooksResponse">
+    <part name="parameters" element="tns:RecupereBooksResponse" />
+  </message>
+  <message name="RecupererAuthors">
+    <part name="parameters" element="tns:RecupererAuthors" />
+  </message>
+  <message name="RecupererAuthorsResponse">
+    <part name="parameters" element="tns:RecupererAuthorsResponse" />
+  </message>
+  <portType name="DAOBookService">
+    <operation name="AddBook">
+      <input message="tns:AddBook" />
+      <output message="tns:AddBookResponse" />
+    </operation>
+    <operation name="ModifyBook">
+      <input message="tns:ModifyBook" />
+      <output message="tns:ModifyBookResponse" />
+    </operation>
+    <operation name="DeleteBook">
+      <input message="tns:DeleteBook" />
+      <output message="tns:DeleteBookResponse" />
+    </operation>
+    <operation name="RecupereBooks">
+      <input message="tns:RecupereBooks" />
+      <output message="tns:RecupereBooksResponse" />
+    </operation>
+    <operation name="RecupererAuthors">
+      <input message="tns:RecupererAuthors" />
+      <output message="tns:RecupererAuthorsResponse" />
+    </operation>
+  </portType>
+  <binding name="DAOBookServicePortBinding" type="tns:DAOBookService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="AddBook">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ModifyBook">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="DeleteBook">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="RecupereBooks">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="RecupererAuthors">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="DAOBookServiceService">
+    <port name="DAOBookServicePort" binding="tns:DAOBookServicePortBinding">
+      <soap:address location="http://127.0.0.1:3347/LibraryManager/DAOBookService" />
+    </port>
+  </service>
+</definitions>

@@ -1,0 +1,12 @@
+C:\Users\ghada\source\repos\Library\Library\bin\Debug\Library.exe.config
+C:\Users\ghada\source\repos\Library\Library\bin\Debug\Library.exe
+C:\Users\ghada\source\repos\Library\Library\bin\Debug\Library.pdb
+C:\Users\ghada\source\repos\Library\Library\obj\Debug\Library.csprojAssemblyReference.cache
+C:\Users\ghada\source\repos\Library\Library\obj\Debug\Library.AdminForm.resources
+C:\Users\ghada\source\repos\Library\Library\obj\Debug\Library.LibraryGCForm.resources
+C:\Users\ghada\source\repos\Library\Library\obj\Debug\Library.Properties.Resources.resources
+C:\Users\ghada\source\repos\Library\Library\obj\Debug\Library.SignInForm.resources
+C:\Users\ghada\source\repos\Library\Library\obj\Debug\Library.UserForm.resources
+C:\Users\ghada\source\repos\Library\Library\obj\Debug\Library.csproj.GenerateResource.cache
+C:\Users\ghada\source\repos\Library\Library\obj\Debug\Library.exe
+C:\Users\ghada\source\repos\Library\Library\obj\Debug\Library.pdb

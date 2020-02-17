@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://controller/" targetNamespace="http://controller/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="AddUser" type="tns:AddUser" />
+  <xs:element name="AddUserResponse" type="tns:AddUserResponse" />
+  <xs:element name="DeleteUser" type="tns:DeleteUser" />
+  <xs:element name="DeleteUserResponse" type="tns:DeleteUserResponse" />
+  <xs:element name="ModifyUser" type="tns:ModifyUser" />
+  <xs:element name="ModifyUserResponse" type="tns:ModifyUserResponse" />
+  <xs:element name="RecupereUsers" type="tns:RecupereUsers" />
+  <xs:element name="RecupereUsersResponse" type="tns:RecupereUsersResponse" />
+  <xs:element name="find" type="tns:find" />
+  <xs:element name="findResponse" type="tns:findResponse" />
+  <xs:complexType name="find">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+      <xs:element minOccurs="0" name="arg1" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:user" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="user">
+    <xs:sequence>
+      <xs:element name="id_user" type="xs:int" />
+      <xs:element minOccurs="0" name="login" type="xs:string" />
+      <xs:element minOccurs="0" name="password" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DeleteUser">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DeleteUserResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AddUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:user" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AddUserResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ModifyUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:user" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ModifyUserResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RecupereUsers">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="RecupereUsersResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:user" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

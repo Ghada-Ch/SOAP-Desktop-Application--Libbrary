@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://controller/" targetNamespace="http://controller/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="AddBook" type="tns:AddBook" />
+  <xs:element name="AddBookResponse" type="tns:AddBookResponse" />
+  <xs:element name="DeleteBook" type="tns:DeleteBook" />
+  <xs:element name="DeleteBookResponse" type="tns:DeleteBookResponse" />
+  <xs:element name="ModifyBook" type="tns:ModifyBook" />
+  <xs:element name="ModifyBookResponse" type="tns:ModifyBookResponse" />
+  <xs:element name="RecupereBooks" type="tns:RecupereBooks" />
+  <xs:element name="RecupereBooksResponse" type="tns:RecupereBooksResponse" />
+  <xs:element name="RecupererAuthors" type="tns:RecupererAuthors" />
+  <xs:element name="RecupererAuthorsResponse" type="tns:RecupererAuthorsResponse" />
+  <xs:complexType name="RecupereBooks">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="RecupereBooksResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:book" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="book">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="auteur" type="xs:string" />
+      <xs:element minOccurs="0" name="genre" type="xs:string" />
+      <xs:element name="id_book" type="xs:int" />
+      <xs:element minOccurs="0" name="language" type="xs:string" />
+      <xs:element name="pages" type="xs:int" />
+      <xs:element name="prix" type="xs:float" />
+      <xs:element minOccurs="0" name="publisher" type="xs:string" />
+      <xs:element minOccurs="0" name="titre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RecupererAuthors">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="RecupererAuthorsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ModifyBook">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:book" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ModifyBookResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AddBook">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:book" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AddBookResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DeleteBook">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DeleteBookResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
